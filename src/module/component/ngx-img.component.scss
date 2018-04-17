@@ -1,27 +1,5 @@
-@import "boostrap.scss"
-  
-$ngx-img-width: 100% !default;
-$ngx-img-height: 200px !default;
-$ngx-img-font-family: "Helvetica", "Arial" !default;
-$ngx-img-font-weight: 300 !default;
-$ngx-img-font-size: 14px !default;
-$ngx-img-line-height: 22px !default;
-$ngx-img-text-color: #777 !default;
-$ngx-img-icon-color: #CCC !default;
-$ngx-img-background: #FFF !default;
-$ngx-img-border-size: 2px !default;
-$ngx-img-border-color: #E5E5E5 !default;
-$ngx-img-infos-background: transparentize(#000, 0.3) !default;
-$ngx-img-infos-color: #FFF !default;
-$ngx-img-clear-color: #FFF !default;
-$ngx-img-error-color: #f44336 !default;
-$ngx-img-primary-color: #17a2c4 !default;
-$ngx-img-stripes: #F6F6F6 !default;
-$ngx-img-loader-size: 20px !default;
-$ngx-img-loader-border: 1px !default;
-$ngx-img-loader-fill: #CCC !default;
-$ngx-img-loader-trace: #777 !default;
-
+@import "defaults.scss"
+ 
 .ngx-img-wrapper {
   display: block;
   position: relative;
@@ -64,7 +42,7 @@ $ngx-img-loader-trace: #777 !default;
   }
 
   &.has-error {
-    border-color: $ngx-img-error-color;
+    border-color: var (--ngx-img-error-color);
 
     .ngx-img-message .ngx-img-error {
       display: block;
@@ -115,7 +93,7 @@ $ngx-img-loader-trace: #777 !default;
   .ngx-img-button {
     font-size: .7rem;
     padding: .6rem 1rem;
-    background: $ngx-img-primary-color;
+    background: var (--ngx-img-primary-color);
     box-shadow: none;
     border-radius: 10em;
     border: 0;
@@ -139,7 +117,7 @@ $ngx-img-loader-trace: #777 !default;
 
     svg.ngx-img-upload {
       .st-1, .st-2 {
-        fill: $ngx-img-primary-color;
+        fill: var (--ngx-img-primary-color);
       }
     }
 
@@ -147,7 +125,7 @@ $ngx-img-loader-trace: #777 !default;
       margin: 5px 0 0 0;
 
       &.ngx-img-error {
-        color: $ngx-img-error-color;
+        color: var (--ngx-img-error-color);
         font-weight: bold;
         display: none;
       }
@@ -167,9 +145,9 @@ $ngx-img-loader-trace: #777 !default;
     top: 10px;
     right: 10px;
     background: none;
-    border: 2px solid $ngx-img-clear-color;
+    border: 2px solid var (--ngx-img-clear-color);
     text-transform: uppercase;
-    font-family: $ngx-img-font-family;
+    font-family: var (--ngx-img-font-family);
     font-size: 11px;
     padding: 4px 8px;
     font-weight: bold;
@@ -177,7 +155,7 @@ $ngx-img-loader-trace: #777 !default;
     transition: all 0.15s linear;
 
     &:hover {
-      background: transparentize($ngx-img-clear-color, 0.8);
+      background: transparentize(var (--ngx-img-clear-color)), 0.8);
     }
   }
 
@@ -185,7 +163,7 @@ $ngx-img-loader-trace: #777 !default;
     display: block;
     position: absolute;
     z-index: 1;
-    background-color: $ngx-img-background;
+    background-color: var (--ngx-img-background);
     padding: 5px;
     width: 100%;
     height: 100%;
@@ -203,7 +181,7 @@ $ngx-img-loader-trace: #777 !default;
         position: relative;
         max-width: 100%;
         max-height: 100%;
-        background-color: $ngx-img-background;
+        background-color: var (--ngx-img-background);
         transition: border-color 0.15s linear;
       }
 
@@ -240,7 +218,7 @@ $ngx-img-loader-trace: #777 !default;
       right: 0;
       bottom: 0;
       z-index: 3;
-      background: $ngx-img-infos-background;
+      background: var (--ngx-img-infos-background);
       opacity: 0;
       transition: opacity 0.15s linear;
 
@@ -261,7 +239,7 @@ $ngx-img-loader-trace: #777 !default;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          color: $ngx-img-infos-color;
+          color: var (--ngx-img-infos-color);
           text-align: center;
           line-height: 25px;
           font-weight: bold;
@@ -279,7 +257,7 @@ $ngx-img-loader-trace: #777 !default;
               top: 0;
               left: 50%;
               transform: translate(-50%, 0);
-              background: $ngx-img-infos-color;
+              background: var (--ngx-img-infos-color);
               width: 30px;
               height: 2px;
             }
@@ -348,7 +326,7 @@ $ngx-img-loader-trace: #777 !default;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            color: $ngx-img-text-color;
+            color: var (--ngx-img-text-color);
             text-align: left;
             line-height: 25px;
 
@@ -378,7 +356,7 @@ $ngx-img-loader-trace: #777 !default;
       bottom: 23px;
       opacity: 1;
       border-color: transparentize($ngx-img-text-color, 0.3);
-      color: $ngx-img-text-color;
+      color: var (--ngx-img-text-color);
     }
 
     &.has-preview {
@@ -408,14 +386,14 @@ $ngx-img-loader-trace: #777 !default;
     &::after {
       display: block;
       position: relative;
-      width: $ngx-img-loader-size;
-      height: $ngx-img-loader-size;
+      width: var (--ngx-img-loader-size);
+      height: var (--ngx-img-loader-size);
       animation: rotate 0.6s linear infinite;
       border-radius: 100%;
-      border-top: $ngx-img-loader-border solid $ngx-img-loader-fill;
-      border-bottom: $ngx-img-loader-border solid $ngx-img-loader-trace;
-      border-left: $ngx-img-loader-border solid $ngx-img-loader-fill;
-      border-right: $ngx-img-loader-border solid $ngx-img-loader-trace;
+      border-top: var (--ngx-img-loader-border) solid var (--ngx-img-loader-fill);
+      border-bottom: var (--ngx-img-loader-border) solid var (--ngx-img-loader-trace);
+      border-left: var (--ngx-img-loader-border) solid var (--ngx-img-loader-fill);
+      border-right: var (--ngx-img-loader-border) solid var (--ngx-img-loader-trace);
       content: '';
     }
   }
@@ -427,7 +405,7 @@ $ngx-img-loader-trace: #777 !default;
     right: 0;
     bottom: 0;
     z-index: 3;
-    background: transparentize($ngx-img-error-color, 0.2);
+    background: transparentize(var (--ngx-img-error-color), 0.2);
     text-align: left;
     visibility: hidden;
     opacity: 0;
@@ -462,7 +440,7 @@ $ngx-img-loader-trace: #777 !default;
 
       li {
         margin-left: 20px;
-        color: $ngx-img-error-color;
+        color: var (--ngx-img-error-color);
         font-weight: bold;
       }
     }
