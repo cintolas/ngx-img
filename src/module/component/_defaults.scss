@@ -24,11 +24,8 @@ $variables (
   --ngx-img-loader-trace: #777 !default;
 )
 
-:root element
-@if($css4) {
-  :root {
-    @each $variable, $value in $variables {
-      #{$variable}: $value;
-    }
+:root {
+  @each $variable, $value in $variables {
+    #{$variable}: $value;
   }
 }
