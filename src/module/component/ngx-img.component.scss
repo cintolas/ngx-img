@@ -138,6 +138,7 @@
   }
 
   .ngx-img-clear {
+    $clear-color: var (--ngx-img-clear-color)
     display: block;
     position: absolute;
     opacity: 0;
@@ -155,7 +156,7 @@
     transition: all 0.15s linear;
 
     &:hover {
-      background: transparentize(var (--ngx-img-clear-color), 0.8);
+      background: transparentize($clear-color, 0.8);
     }
   }
 
@@ -352,10 +353,11 @@
     }
 
     .ngx-img-clear {
+      $clear-color: var (--ngx-img-text-color)
       top: auto;
       bottom: 23px;
       opacity: 1;
-      border-color: transparentize( var (--ngx-img-text-color), 0.3);
+      border-color: transparentize($clear-color, 0.3);
       color: var (--ngx-img-text-color);
     }
 
@@ -399,13 +401,14 @@
   }
 
   .ngx-img-errors-container {
+    $error-color: var (--ngx-img-error-color)
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 3;
-    background: transparentize(var (--ngx-img-error-color), 0.2);
+    background: transparentize($error-color, 0.2);
     text-align: left;
     visibility: hidden;
     opacity: 0;
