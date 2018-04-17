@@ -1,27 +1,27 @@
 $css4: true !default;
 
 $variables: (
-  --ngx-img-width: 100%;
-  --ngx-img-height: 200px;
-  --ngx-img-font-family: "Helvetica", "Arial";
-  --ngx-img-font-weight: 300;
-  --ngx-img-font-size: 14px;
-  --ngx-img-line-height: 22px;
-  --ngx-img-text-color: #777;
-  --ngx-img-icon-color: #CCC;
-  --ngx-img-background: #FFF;
-  --ngx-img-border-size: 2px;
-  --ngx-img-border-color: #E5E5E5;
-  --ngx-img-infos-background: transparentize(#000, 0.3);
-  --ngx-img-infos-color: #FFF;
-  --ngx-img-clear-color: #FFF;
-  --ngx-img-error-color: #f44336;
-  --ngx-img-primary-color: #17a2c4;
-  --ngx-img-stripes: #F6F6F6;
-  --ngx-img-loader-size: 20px;
-  --ngx-img-loader-border: 1px;
-  --ngx-img-loader-fill: #CCC;
-  --ngx-img-loader-trace: #777;
+  --ngx-img-width: 100%,
+  --ngx-img-height: 200px,
+  --ngx-img-font-family: "Helvetica", "Arial",
+  --ngx-img-font-weight: 300,
+  --ngx-img-font-size: 14px,
+  --ngx-img-line-height: 22px,
+  --ngx-img-text-color: #777,
+  --ngx-img-icon-color: #CCC,
+  --ngx-img-background: #FFF,
+  --ngx-img-border-size: 2px,
+  --ngx-img-border-color: #E5E5E5,
+  --ngx-img-infos-background: transparentize(#000, 0.3),
+  --ngx-img-infos-color: #FFF,
+  --ngx-img-clear-color: #FFF,
+  --ngx-img-error-color: #f44336,
+  --ngx-img-primary-color: #17a2c4,
+  --ngx-img-stripes: #F6F6F6,
+  --ngx-img-loader-size: 20px,
+  --ngx-img-loader-border: 1px,
+  --ngx-img-loader-fill: #CCC,
+  --ngx-img-loader-trace: #777
 )
 
 :root {
