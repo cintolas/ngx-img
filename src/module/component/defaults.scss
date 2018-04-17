@@ -1,0 +1,34 @@
+$css4: true !default;
+
+$variables (
+  --ngx-img-width: 100% !default;
+  --ngx-img-height: 200px !default;
+  --ngx-img-font-family: "Helvetica", "Arial" !default;
+  --ngx-img-font-weight: 300 !default;
+  --ngx-img-font-size: 14px !default;
+  --ngx-img-line-height: 22px !default;
+  --ngx-img-text-color: #777 !default;
+  --ngx-img-icon-color: #CCC !default;
+  --ngx-img-background: #FFF !default;
+  --ngx-img-border-size: 2px !default;
+  --ngx-img-border-color: #E5E5E5 !default;
+  --ngx-img-infos-background: transparentize(#000, 0.3) !default;
+  --ngx-img-infos-color: #FFF !default;
+  --ngx-img-clear-color: #FFF !default;
+  --ngx-img-error-color: #f44336 !default;
+  --ngx-img-primary-color: #17a2c4 !default;
+  --ngx-img-stripes: #F6F6F6 !default;
+  --ngx-img-loader-size: 20px !default;
+  --ngx-img-loader-border: 1px !default;
+  --ngx-img-loader-fill: #CCC !default;
+  --ngx-img-loader-trace: #777 !default;
+)
+
+:root element
+@if($css4) {
+  :root {
+    @each $variable, $value in $variables {
+      #{$variable}: $value;
+    }
+  }
+}
