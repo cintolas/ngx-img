@@ -156,7 +156,7 @@
     transition: all 0.15s linear;
 
     &:hover {
-      background: transparentize($clear-color, 0.8);
+      background: transparentize($ngx-img-clear-color, 0.8);
     }
   }
 
@@ -357,7 +357,7 @@
       top: auto;
       bottom: 23px;
       opacity: 1;
-      border-color: transparentize($clear-color, 0.3);
+      border-color: transparentize($ngx-img-text-color, 0.3);
       color: var (--ngx-img-text-color);
     }
 
@@ -408,7 +408,7 @@
     right: 0;
     bottom: 0;
     z-index: 3;
-    background: transparentize($error-color, 0.2);
+    background: transparentize($ngx-img-error-color, 0.2);
     text-align: left;
     visibility: hidden;
     opacity: 0;
