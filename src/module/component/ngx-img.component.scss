@@ -138,7 +138,7 @@
   }
 
   .ngx-img-clear {
-    $clear-color: var (--ngx-img-clear-color)
+    $clear-color: var (--ngx-img-clear-color);
     display: block;
     position: absolute;
     opacity: 0;
@@ -353,7 +353,7 @@
     }
 
     .ngx-img-clear {
-      $clear-color: var (--ngx-img-text-color)
+      $clear-color: var (--ngx-img-text-color);
       top: auto;
       bottom: 23px;
       opacity: 1;
@@ -401,7 +401,7 @@
   }
 
   .ngx-img-errors-container {
-    $error-color: var (--ngx-img-error-color)
+    $error-color: var (--ngx-img-error-color);
     position: absolute;
     left: 0;
     top: 0;
