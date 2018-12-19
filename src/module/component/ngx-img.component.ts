@@ -211,6 +211,6 @@ export class NgxImgComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.reset();
+    //this.reset();
   }
 }
